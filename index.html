@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OddiBites - Nairobi's favorite street food vendor. Order delicious fried chicken, juice, smokies, beef smokies, samosa, and chapatis. Fast delivery across Nairobi. Order now via WhatsApp!">
+    <meta name="keywords" content="OddiBites, Nairobi street food, fried chicken, juice, smokies, beef smokies, samosa, chapatis, food delivery Nairobi, WhatsApp ordering, fast food Nairobi">
+    <meta name="author" content="OddiBites">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="OddiBites - Nairobi Street Food Delivery">
+    <meta property="og:description" content="Delicious street food delivered to your doorstep in Nairobi. Fried chicken, smokies, samosa, chapatis and more. Order via WhatsApp!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oddibites.com">
+    <meta property="og:image" content="https://oddibites.com/images/oddibites-logo.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OddiBites - Nairobi Street Food">
+    <meta name="twitter:description" content="Best street food in Nairobi. Fried chicken, smokies, samosa, chapatis. Fast delivery via WhatsApp!">
+    
+    <title>OddiBites - Nairobi Street Food Delivery | Fried Chicken, Smokies, Samosa, Chapatis</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+        rel="stylesheet"
+        as="style"
+        onload="this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Space+Grotesk%3Awght%40400%3B500%3B700"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "OddiBites",
+        "description": "Nairobi's favorite street food vendor offering delicious fried chicken, juice, smokies, beef smokies, samosa, and chapatis with fast delivery across Nairobi.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Nairobi",
+            "addressLocality": "Nairobi",
+            "addressRegion": "Nairobi County",
+            "addressCountry": "KE"
+        },
+        "telephone": "+254705012055",
+        "servesCuisine": "Street Food",
+        "openingHours": "Mo-Su 08:00-20:00",
+        "menu": "https://oddibites.com/#menu",
+        "priceRange": "KES 50-500",
+        "deliveryAvailable": true,
+        "areaServed": "Nairobi"
+    }
+    </script>
+</head>
+<body>
+    <div id="app" class="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] group/design-root overflow-x-hidden" style='--select-button-svg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(156,112,73)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e"); font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4ede7] px-4 sm:px-10 py-3">
+                <div class="flex items-center gap-4 text-[#1c140d]">
+                    <div class="size-4">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h1 class="text-[#1c140d] text-lg font-bold leading-tight tracking-[-0.015em]">OddiBites</h1>
+                </div>
+                <nav class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-4 sm:gap-9">
+                        <a class="text-[#1c140d] text-sm font-medium leading-normal" href="#menu">Menu</a>
+                        <a class="text-[#1c140d] text-sm font-medium leading-normal" href="#about">About Us</a>
+                        <a class="text-[#1c140d] text-sm font-medium leading-normal" href="#contact">Contact</a>
+                    </div>
+                    <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f38220] text-[#1c140d] text-sm font-bold leading-normal tracking-[0.015em]"
+                        @click="showCart = true"
+                    >
+                        <span class="truncate">Cart ({{ cart.length }})</span>
+                    </button>
+                </nav>
+            </header>
+            
+            <!-- Cart Modal -->
+            <div v-if="showCart" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div class="bg-[#fcfaf8] border border-[#e8dace] rounded-lg max-w-md w-full max-h-[80vh] overflow-y-auto">
+                    <div class="border-b border-[#f4ede7] p-4 flex justify-between items-center">
+                        <h2 class="text-[#1c140d] text-lg font-bold">Your Cart</h2>
+                        <button @click="showCart = false" class="text-[#1c140d] hover:text-[#f38220]" aria-label="Close cart">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div v-if="cart.length === 0">
+                            <p class="text-[#1c140d] text-base font-normal text-center py-8">Your cart is empty.</p>
+                        </div>
+                        <div v-else>
+                            <ul class="mb-3 space-y-2">
+                                <li class="flex justify-between items-center py-2 border-b border-[#f4ede7]"
+                                    v-for="item in cart" :key="item.id">
+                                    <div class="flex-1">
+                                        <span class="text-[#1c140d] text-base font-medium">{{ item.name }}</span>
+                                        <div class="flex items-center gap-2 mt-1">
+                                            <button @click="decreaseQuantity(item)" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">-</button>
+                                            <span class="text-[#1c140d] text-base font-medium min-w-[2rem] text-center">{{ item.quantity }}</span>
+                                            <button @click="increaseQuantity(item)" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-[#1c140d] text-base font-medium">KES {{ (item.price * item.quantity).toFixed(0) }}</span>
+                                        <button @click="removeFromCart(item)" class="block text-red-500 text-sm mt-1 hover:text-red-700">Remove</button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="border-t border-[#f4ede7] pt-3">
+                                <h3 class="text-[#1c140d] text-lg font-bold">Total: KES {{ totalPrice.toFixed(0) }}</h3>
+                                <p class="text-[#9c7049] text-sm mt-1">Free delivery within Nairobi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-[#f4ede7] p-4 flex gap-2">
+                        <button @click="showCart = false" class="flex-1 cursor-pointer items-center justify-center rounded-full h-10 px-4 bg-gray-300 text-[#1c140d] text-sm font-bold">Close</button>
+                        <button @click="sendOrder" :disabled="cart.length === 0" class="flex-1 cursor-pointer items-center justify-center rounded-full h-10 px-4 bg-[#f38220] text-[#1c140d] text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed">Send Order via WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+            
+            <main class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <section id="hero" class="@container">
+                        <div class="@[480px]:p-4">
+                            <div
+                                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80");'
+                            >
+                                <div class="flex flex-col gap-2 text-center">
+                                    <h1
+                                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                                    >
+                                        OddiBites
+                                    </h1>
+                                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                        Nairobi's favorite street food vendor. Delicious fried chicken, smokies, samosa, chapatis and more. Fast delivery across Nairobi. Order now and taste the difference!
+                                    </h2>
+                                </div>
+                                <button
+                                    @click="scrollToMenu"
+                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#f38220] text-[#1c140d] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                                >
+                                    <span class="truncate">Order Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="menu">
+                        <h2 class="text-[#1c140d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Menu</h2>
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div
+                                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                                    style='background-image: url("https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80");'
+                                    role="img" aria-label="Fried Chicken"
+                                ></div>
+                                <div>
+                                    <p class="text-[#1c140d] text-base font-medium leading-normal">Fried Chicken</p>
+                                    <p class="text-[#9c7049] text-sm font-normal leading-normal">Crispy and juicy fried chicken pieces. KES 300</p>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <button @click="decreaseProductQuantity(products[0])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">-</button>
+                                        <span class="text-[#1c140d] text-base font-medium min-w-[2rem] text-center">{{ products[0].quantity }}</span>
+                                        <button @click="increaseProductQuantity(products[0])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">+</button>
+                                    </div>
+                                    <button @click="addToCart(products[0])" :disabled="products[0].quantity === 0" class="flex w-full cursor-pointer items-center justify-center rounded-full h-10 px-4 bg-[#f38220] text-[#1c140d] text-sm font-bold mt-2 disabled:opacity-50 disabled:cursor-not-allowed">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div
+                                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                                    style='background-image: url("https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80");'
+                                    role="img" aria-label="Juice"
+                                ></div>
+                                <div>
+                                    <p class="text-[#1c140d] text-base font-medium leading-normal">Juice</p>
+                                    <p class="text-[#9c7049] text-sm font-normal leading-normal">Fresh fruit juice - orange, mango, or passion. KES 150</p>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <button @click="decreaseProductQuantity(products[1])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">-</button>
+                                        <span class="text-[#1c140d] text-base font-medium min-w-[2rem] text-center">{{ products[1].quantity }}</span>
+                                        <button @click="increaseProductQuantity(products[1])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">+</button>
+                                    </div>
+                                    <button @click="addToCart(products[1])" :disabled="products[1].quantity === 0" class="flex w-full cursor-pointer items-center justify-center rounded-full h-10 px-4 bg-[#f38220] text-[#1c140d] text-sm font-bold mt-2 disabled:opacity-50 disabled:cursor-not-allowed">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div
+                                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                                    style='background-image: url("https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80");'
+                                    role="img" aria-label="Smokies"
+                                ></div>
+                                <div>
+                                    <p class="text-[#1c140d] text-base font-medium leading-normal">Smokies</p>
+                                    <p class="text-[#9c7049] text-sm font-normal leading-normal">Delicious grilled smokies with spices. KES 100</p>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <button @click="decreaseProductQuantity(products[2])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">-</button>
+                                        <span class="text-[#1c140d] text-base font-medium min-w-[2rem] text-center">{{ products[2].quantity }}</span>
+                                        <button @click="increaseProductQuantity(products[2])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">+</button>
+                                    </div>
+                                    <button @click="addToCart(products[2])" :disabled="products[2].quantity === 0" class="flex w-full cursor-pointer items-center justify-center rounded-full h-10 px-4 bg-[#f38220] text-[#1c140d] text-sm font-bold mt-2 disabled:opacity-50 disabled:cursor-not-allowed">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div
+                                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                                    style='background-image: url("https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80");'
+                                    role="img" aria-label="Beef Smokies"
+                                ></div>
+                                <div>
+                                    <p class="text-[#1c140d] text-base font-medium leading-normal">Beef Smokies</p>
+                                    <p class="text-[#9c7049] text-sm font-normal leading-normal">Premium beef smokies with special seasoning. KES 120</p>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <button @click="decreaseProductQuantity(products[3])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">-</button>
+                                        <span class="text-[#1c140d] text-base font-medium min-w-[2rem] text-center">{{ products[3].quantity }}</span>
+                                        <button @click="increaseProductQuantity(products[3])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">+</button>
+                                    </div>
+                                    <button @click="addToCart(products[3])" :disabled="products[3].quantity === 0" class="flex w-full cursor-pointer items-center justify-center rounded-full h-10 px-4 bg-[#f38220] text-[#1c140d] text-sm font-bold mt-2 disabled:opacity-50 disabled:cursor-not-allowed">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div
+                                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                                    style='background-image: url("https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80");'
+                                    role="img" aria-label="Samosa"
+                                ></div>
+                                <div>
+                                    <p class="text-[#1c140d] text-base font-medium leading-normal">Samosa</p>
+                                    <p class="text-[#9c7049] text-sm font-normal leading-normal">Crispy samosa with spiced potato filling. KES 50</p>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <button @click="decreaseProductQuantity(products[4])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">-</button>
+                                        <span class="text-[#1c140d] text-base font-medium min-w-[2rem] text-center">{{ products[4].quantity }}</span>
+                                        <button @click="increaseProductQuantity(products[4])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">+</button>
+                                    </div>
+                                    <button @click="addToCart(products[4])" :disabled="products[4].quantity === 0" class="flex w-full cursor-pointer items-center justify-center rounded-full h-10 px-4 bg-[#f38220] text-[#1c140d] text-sm font-bold mt-2 disabled:opacity-50 disabled:cursor-not-allowed">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div
+                                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                                    style='background-image: url("https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80");'
+                                    role="img" aria-label="Chapatis"
+                                ></div>
+                                <div>
+                                    <p class="text-[#1c140d] text-base font-medium leading-normal">Chapatis</p>
+                                    <p class="text-[#9c7049] text-sm font-normal leading-normal">Soft and fluffy chapatis, perfect with any meal. KES 30</p>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <button @click="decreaseProductQuantity(products[5])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">-</button>
+                                        <span class="text-[#1c140d] text-base font-medium min-w-[2rem] text-center">{{ products[5].quantity }}</span>
+                                        <button @click="increaseProductQuantity(products[5])" class="w-8 h-8 rounded-full bg-[#f38220] text-white flex items-center justify-center hover:bg-[#e67300]">+</button>
+                                    </div>
+                                    <button @click="addToCart(products[5])" :disabled="products[5].quantity === 0" class="flex w-full cursor-pointer items-center justify-center rounded-full h-10 px-4 bg-[#f38220] text-[#1c140d] text-sm font-bold mt-2 disabled:opacity-50 disabled:cursor-not-allowed">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="about">
+                        <h2 class="text-[#1c140d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About Us</h2>
+                        <p class="text-[#1c140d] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                            OddiBites is Nairobi's favorite street food vendor, specializing in delicious fast foods including fried chicken, fresh juice, smokies, beef smokies, samosa, and chapatis. We use fresh ingredients and our secret recipes to create mouthwatering dishes that will leave you craving for more. Our mission is to provide delicious food with excellent service and fast delivery across Nairobi, making every meal a memorable experience.
+                        </p>
+                    </section>
+                    
+                    <section id="contact">
+                        <h2 class="text-[#1c140d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact & Delivery</h2>
+                        <div class="px-4 pb-3 pt-1">
+                            <p class="text-[#1c140d] text-base font-normal leading-normal mb-4">
+                                Have questions or want to place an order? Contact us via WhatsApp for the fastest service!
+                            </p>
+                            <div class="bg-[#f4ede7] rounded-lg p-4 space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-[#f38220]" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                    </svg>
+                                    <span class="text-[#1c140d] text-sm">WhatsApp: +254705012055</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-[#f38220]" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[#1c140d] text-sm">Delivery: All areas in Nairobi</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-[#f38220]" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[#1c140d] text-sm">Hours: 8:00 AM - 8:00 PM Daily</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-[#f38220]" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"></path>
+                                    </svg>
+                                    <span class="text-[#1c140d] text-sm">Payment: Mpesa & Cash</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            setup() {
+                // Reactive state
+                const products = Vue.ref([
+                    { id: 1, name: 'Fried Chicken', price: 300, quantity: 0 },
+                    { id: 2, name: 'Juice', price: 150, quantity: 0 },
+                    { id: 3, name: 'Smokies', price: 100, quantity: 0 },
+                    { id: 4, name: 'Beef Smokies', price: 120, quantity: 0 },
+                    { id: 5, name: 'Samosa', price: 50, quantity: 0 },
+                    { id: 6, name: 'Chapatis', price: 30, quantity: 0 }
+                ]);
+
+                const cart = Vue.ref([]);
+                const showCart = Vue.ref(false);
+
+                // Computed total price
+                const totalPrice = Vue.computed(() => {
+                    return cart.value.reduce((total, item) => total + item.price * item.quantity, 0);
+                });
+
+                // Methods
+                const increaseProductQuantity = (product) => {
+                    product.quantity++;
+                };
+
+                const decreaseProductQuantity = (product) => {
+                    if (product.quantity > 0) {
+                        product.quantity--;
+                    }
+                };
+
+                const addToCart = (product) => {
+                    if (product.quantity > 0) {
+                        const cartItem = cart.value.find(item => item.id === product.id);
+                        if (cartItem) {
+                            cartItem.quantity += product.quantity;
+                        } else {
+                            cart.value.push({ ...product });
+                        }
+                        product.quantity = 0; // Reset product quantity
+                        showSuccessMessage(`${product.name} added to cart!`);
+                    }
+                };
+
+                const increaseQuantity = (item) => {
+                    item.quantity++;
+                };
+
+                const decreaseQuantity = (item) => {
+                    if (item.quantity > 1) {
+                        item.quantity--;
+                    } else {
+                        removeFromCart(item);
+                    }
+                };
+
+                const removeFromCart = (item) => {
+                    cart.value = cart.value.filter(cartItem => cartItem.id !== item.id);
+                };
+
+                const sendOrder = () => {
+                    if (cart.value.length === 0) {
+                        alert('Your cart is empty!');
+                        return;
+                    }
+
+                    const orderItems = cart.value.map(item => 
+                        `${item.name} (x${item.quantity}): KES ${(item.price * item.quantity).toFixed(0)}`
+                    ).join('\n');
+
+                    const message = `🍗 *NEW ORDER - OddiBites* 🍗
+
+*Order Details:*
+${orderItems}
+
+*Total: KES ${totalPrice.value.toFixed(0)}*
+
+📍 *Delivery Address:* [Please provide your delivery address]
+
+📱 *Customer Phone:* [Please provide your phone number]
+
+⏰ *Preferred Delivery Time:* [Please specify]
+
+💳 *Payment Method:* [Mpesa/Cash]
+
+Thank you for choosing OddiBites! 🎉`;
+
+                    const phoneNumber = '+254705012055';
+                    const encodedMessage = encodeURIComponent(message);
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+                    // Open WhatsApp
+                    window.open(whatsappUrl, '_blank');
+                    
+                    // Clear cart and refresh page after a short delay
+                    setTimeout(() => {
+                        cart.value = [];
+                        showCart.value = false;
+                        window.location.reload();
+                    }, 2000);
+                };
+
+                const scrollToMenu = () => {
+                    document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
+                };
+
+                const showSuccessMessage = (message) => {
+                    // Create a simple success message
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg z-50';
+                    successDiv.textContent = message;
+                    document.body.appendChild(successDiv);
+                    
+                    setTimeout(() => {
+                        document.body.removeChild(successDiv);
+                    }, 3000);
+                };
+
+                return { 
+                    products, 
+                    cart, 
+                    totalPrice, 
+                    showCart,
+                    increaseProductQuantity,
+                    decreaseProductQuantity,
+                    addToCart,
+                    increaseQuantity,
+                    decreaseQuantity,
+                    removeFromCart,
+                    sendOrder,
+                    scrollToMenu
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
