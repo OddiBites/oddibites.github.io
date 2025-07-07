@@ -23,7 +23,7 @@
     <title>OddiBites - Nairobi Street Food Delivery | Fried Chicken, Smokies, Samosa, Chapatis</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>">
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>">
     
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
@@ -64,10 +64,8 @@
         <div class="layout-container flex h-full grow flex-col">
             <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4ede7] px-4 sm:px-10 py-3">
                 <div class="flex items-center gap-4 text-[#1c140d]">
-                    <div class="size-4">
-                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
-                        </svg>
+                    <div class="size-10">
+                        <img src="assets/logo.png" alt="OddiBites Logo" class="h-10 w-10 object-contain" />
                     </div>
                     <h1 class="text-[#1c140d] text-lg font-bold leading-tight tracking-[-0.015em]">OddiBites</h1>
                 </div>
@@ -119,6 +117,10 @@
                                     </div>
                                 </li>
                             </ul>
+                            <div class="mb-4">
+                                <label for="deliveryAddress" class="block text-[#1c140d] text-sm font-medium mb-1">Delivery Address <span class="text-red-500">*</span></label>
+                                <input id="deliveryAddress" v-model="deliveryAddress" type="text" class="form-input w-full rounded-xl border-[#e8dace] bg-[#fcfaf8] text-[#1c140d] h-10 p-3" placeholder="Enter your delivery address" required />
+                            </div>
                             <div class="border-t border-[#f4ede7] pt-3">
                                 <h3 class="text-[#1c140d] text-lg font-bold">Total: KES {{ totalPrice.toFixed(0) }}</h3>
                                 <p class="text-[#9c7049] text-sm mt-1">Free delivery within Nairobi</p>
@@ -136,7 +138,7 @@
                 <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                     <section id="hero" class="@container">
                         <div class="@[480px]:p-4">
-                            <div
+                        <div
                                 class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
                                 style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80");'
                             >
@@ -339,6 +341,7 @@
 
                 const cart = Vue.ref([]);
                 const showCart = Vue.ref(false);
+                const deliveryAddress = Vue.ref("");
 
                 // Computed total price
                 const totalPrice = Vue.computed(() => {
@@ -390,27 +393,16 @@
                         alert('Your cart is empty!');
                         return;
                     }
+                    if (!deliveryAddress.value.trim()) {
+                        alert('Please enter your delivery address.');
+                        return;
+                    }
 
                     const orderItems = cart.value.map(item => 
                         `${item.name} (x${item.quantity}): KES ${(item.price * item.quantity).toFixed(0)}`
                     ).join('\n');
 
-                    const message = `🍗 *NEW ORDER - OddiBites* 🍗
-
-*Order Details:*
-${orderItems}
-
-*Total: KES ${totalPrice.value.toFixed(0)}*
-
-📍 *Delivery Address:* [Please provide your delivery address]
-
-📱 *Customer Phone:* [Please provide your phone number]
-
-⏰ *Preferred Delivery Time:* [Please specify]
-
-💳 *Payment Method:* [Mpesa/Cash]
-
-Thank you for choosing OddiBites! 🎉`;
+                    const message = `🍗 *NEW ORDER - OddiBites* 🍗\n\n*Order Details:*\n${orderItems}\n\n*Total: KES ${totalPrice.value.toFixed(0)}*\n\n📍 *Delivery Address:* ${deliveryAddress.value}\n\nThank you for choosing OddiBites! 🎉`;
 
                     const phoneNumber = '+254705012055';
                     const encodedMessage = encodeURIComponent(message);
@@ -419,9 +411,10 @@ Thank you for choosing OddiBites! 🎉`;
                     // Open WhatsApp
                     window.open(whatsappUrl, '_blank');
                     
-                    // Clear cart and refresh page after a short delay
+                    // Clear cart, address, and refresh page after a short delay
                     setTimeout(() => {
                         cart.value = [];
+                        deliveryAddress.value = "";
                         showCart.value = false;
                         window.location.reload();
                     }, 2000);
@@ -448,6 +441,7 @@ Thank you for choosing OddiBites! 🎉`;
                     cart, 
                     totalPrice, 
                     showCart,
+                    deliveryAddress,
                     increaseProductQuantity,
                     decreaseProductQuantity,
                     addToCart,
