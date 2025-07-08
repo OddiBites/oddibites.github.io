@@ -20,7 +20,7 @@
     <meta name="twitter:title" content="OddiBites - Nairobi Street Food">
     <meta name="twitter:description" content="Best street food in Nairobi. Fried chicken, smokies, samosa, chapatis. Fast delivery via WhatsApp!">
     
-    <title>OddiBites - Nairobi Street Food Delivery | Fried Chicken, Smokies, Samosa, Chapatis</title>
+    <title>OddiBites - Nairobi Street Food Delivery | Fried Chicken, Smokies, Samosa, Chapatis, Juice, Boiled Eggs</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo.png">
@@ -138,26 +138,30 @@
                 <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                     <section id="hero" class="@container">
                         <div class="@[480px]:p-4">
-                        <div
-                                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80");'
+                            <div
+                                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 relative"
+                                style='background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("assets/jumbotron.jpg");'
                             >
-                                <div class="flex flex-col gap-2 text-center">
+                                <div class="flex flex-col gap-2 text-center z-10">
                                     <h1
-                                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] drop-shadow-lg"
                                     >
                                         OddiBites
                                     </h1>
-                                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                                        Nairobi's favorite street food vendor. Delicious fried chicken, smokies, samosa, chapatis and more. Fast delivery across Nairobi. Order now and taste the difference!
+                                    <h2 class="text-yellow-300 text-lg font-semibold leading-normal @[480px]:text-2xl @[480px]:font-semibold @[480px]:leading-normal drop-shadow-lg">
+                                        Delicious African Street Food
                                     </h2>
+                                    <h3 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal drop-shadow">
+                                        Nairobi's favorite street food vendor. Fried chicken, eggs, chapati, juice & more. Fast delivery across Nairobi!
+                                    </h3>
                                 </div>
                                 <button
                                     @click="scrollToMenu"
-                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#f38220] text-[#1c140d] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#f38220] text-[#1c140d] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] z-10 mt-4"
                                 >
                                     <span class="truncate">Order Now</span>
                                 </button>
+                                <div class="absolute inset-0 bg-black opacity-40 rounded-xl pointer-events-none"></div>
                             </div>
                         </div>
                     </section>
